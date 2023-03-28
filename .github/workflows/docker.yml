@@ -13,7 +13,7 @@ jobs:
       - name: Build nosqlbench docker
         run: cd nb && docker build -t nosqlbench -f ./Dockerfile-build ./
       - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: nosqlbench/nosqlbench
           username: ${{ secrets.DOCKER_USERNAME }}
